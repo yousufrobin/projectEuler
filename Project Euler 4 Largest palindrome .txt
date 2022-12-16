@@ -1,0 +1,8 @@
+palindrome = []
+for i in range(100, 999):
+    for j in range(100, 999):
+        product = str(i * j)
+        if str(product) == str(product[:: -1]):
+            palindrome.append(int(product))
+print(palindrome)
+print(max(palindrome))

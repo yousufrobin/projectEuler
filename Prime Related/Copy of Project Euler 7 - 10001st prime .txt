@@ -1,0 +1,23 @@
+import time
+import math
+start = time.time()
+def is_prime(num):
+    if num % 2 == 0:
+        return False
+    for i in range(2, int(math.sqrt(num) + 1)): # range(2, int(num / 2 + 1)) takes huge time
+        if num % i == 0:
+            return False
+    return True
+
+
+
+primes = [2]
+pnum = 3
+while len(primes) <= 10001:
+    if is_prime(pnum):
+        primes.append(pnum)
+    pnum += 2
+
+print(primes[10000])
+end =time.time()
+print(end - start)

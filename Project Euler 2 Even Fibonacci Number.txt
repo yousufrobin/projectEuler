@@ -1,0 +1,18 @@
+num1 = 1
+num2 = 2
+num3 = num1 + num2
+
+fib = [1,2]
+while num3 < 4000000:
+    fib.append(num3)
+    num3 = num1 + num2
+    num1 = num2
+    num2 = num3
+
+print(fib)
+
+fibsum = 0
+for i in fib:
+    if i % 2 == 0:
+        fibsum += i
+print(fibsum)
